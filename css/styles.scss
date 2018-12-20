@@ -722,6 +722,8 @@ svg.arrow.right {
 /* Navigation
    ========================================================================== */
    header {
+     position: relative;
+     z-index: 100;
      text-transform: uppercase;
      color: #ffffff;
      background: #000000;
@@ -954,3 +956,91 @@ svg.arrow.right {
 
       /* Resource
         ========================================================================== */
+
+        #resources-nav {
+          background: #FFFF00;
+          height: calc(76px);
+          transform: translateY(-60px);
+          transition-duration: 0.5s;
+          cursor: pointer;
+
+          &:hover {
+            transform: translateY(0);
+          }
+          p {
+            text-align: center;
+          }
+        }
+        #resources-intro {
+          .row {
+            padding-bottom: 20px;
+            &:first-child {
+              padding-bottom: 60px;
+            }
+          }
+          p {
+            padding-bottom: 1em;
+          }
+        }
+        #register {
+          .row:first-child {
+            padding-bottom: 60px;
+          }
+        }
+        .register-step {
+          .column {
+             &._75 {
+               padding-top: 5px;
+               border-top: 1px solid #000000;
+               @media only screen and (max-width: 800px) {
+                 border-top: none;
+                 padding-top: 0;
+                 padding-bottom: 5px;
+               }
+             }
+            h4 {
+              padding-top: 5px;
+              border-top: 1px solid #000000;
+              margin-right: 15px;
+              @media only screen and (max-width: 800px) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        #member-resource, #faq {
+          .row:first-child {
+            padding-bottom: 60px;
+          }
+          span.pdf {
+            float: right;
+          }
+          h4 {
+            border-top: 1px solid #000000;
+            margin-right: 15px;
+            padding-top: 5px;
+            @media only screen and (max-width: 800px) {
+              margin-right: 0;
+            }
+          }
+          ul {
+            li {
+              border-top: 1px solid #000000;
+              padding-top: 5px;
+              padding-bottom: 1em;
+            }
+          }
+        }
+        #faq {
+          h4 {
+            border-top: none;
+          }
+          ul {
+            li {
+              p:first-child {
+                font-style: italic;
+              }
+            }
+            padding-bottom: 60px;
+          }
+        }

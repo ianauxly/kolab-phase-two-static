@@ -630,6 +630,8 @@ svg.arrow.right {
 /* Navigation
    ========================================================================== */
 header {
+  position: relative;
+  z-index: 100;
   text-transform: uppercase;
   color: #ffffff;
   background: #000000;
@@ -807,3 +809,68 @@ section.border-top {
 
 /* Resource
         ========================================================================== */
+#resources-nav {
+  background: #FFFF00;
+  height: calc(76px);
+  transform: translateY(-60px);
+  transition-duration: 0.5s;
+  cursor: pointer; }
+  #resources-nav:hover {
+    transform: translateY(0); }
+  #resources-nav p {
+    text-align: center; }
+
+#resources-intro .row {
+  padding-bottom: 20px; }
+  #resources-intro .row:first-child {
+    padding-bottom: 60px; }
+
+#resources-intro p {
+  padding-bottom: 1em; }
+
+#register .row:first-child {
+  padding-bottom: 60px; }
+
+.register-step .column._75 {
+  padding-top: 5px;
+  border-top: 1px solid #000000; }
+  @media only screen and (max-width: 800px) {
+    .register-step .column._75 {
+      border-top: none;
+      padding-top: 0;
+      padding-bottom: 5px; } }
+
+.register-step .column h4 {
+  padding-top: 5px;
+  border-top: 1px solid #000000;
+  margin-right: 15px; }
+  @media only screen and (max-width: 800px) {
+    .register-step .column h4 {
+      margin-right: 0; } }
+
+#member-resource .row:first-child, #faq .row:first-child {
+  padding-bottom: 60px; }
+
+#member-resource span.pdf, #faq span.pdf {
+  float: right; }
+
+#member-resource h4, #faq h4 {
+  border-top: 1px solid #000000;
+  margin-right: 15px;
+  padding-top: 5px; }
+  @media only screen and (max-width: 800px) {
+    #member-resource h4, #faq h4 {
+      margin-right: 0; } }
+
+#member-resource ul li, #faq ul li {
+  border-top: 1px solid #000000;
+  padding-top: 5px;
+  padding-bottom: 1em; }
+
+#faq h4 {
+  border-top: none; }
+
+#faq ul {
+  padding-bottom: 60px; }
+  #faq ul li p:first-child {
+    font-style: italic; }
