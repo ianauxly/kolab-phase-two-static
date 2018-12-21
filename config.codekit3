@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "28905",
 "files": {
+	"/blog.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/blog.html",
+		"oF": 0
+		},
 	"/contact.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -276,6 +283,17 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/make-thing-beauty.jpg": {
+		"ft": 16384,
+		"iS": 1102826,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/make-thing-beauty.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/images/MD_2338.jpg": {
 		"ft": 16384,
 		"iS": 4998501,
@@ -293,17 +311,6 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/placeholder-1180X710.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/images/Screen-Shot-2018-12-12-at-11.47.37-AM.jpg": {
-		"ft": 16384,
-		"iS": 1102826,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/images/Screen-Shot-2018-12-12-at-11.47.37-AM.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -352,6 +359,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/resources.html",
+		"oF": 0
+		},
+	"/shop.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/shop.html",
 		"oF": 0
 		},
 	"/slick/ajax-loader.gif": {

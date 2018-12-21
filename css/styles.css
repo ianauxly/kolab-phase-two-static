@@ -874,3 +874,47 @@ section.border-top {
   padding-bottom: 60px; }
   #faq ul li p:first-child {
     font-style: italic; }
+  #faq ul li ul {
+    padding-bottom: 0;
+    list-style-type: disc;
+    padding-left: 18px; }
+    #faq ul li ul li {
+      border-top: none;
+      padding-bottom: 0;
+      padding-top: 0; }
+
+/* Content
+      ========================================================================== */
+.article img {
+  padding-top: 25px;
+  padding-bottom: 25px; }
+
+.article p {
+  padding-bottom: 1em; }
+
+.social-share li {
+  cursor: pointer;
+  display: inline; }
+
+#articles {
+  padding-bottom: 100px; }
+  #articles h2 {
+    padding-bottom: 0.5em;
+    padding-top: 0.5em; }
+  #articles p {
+    padding-bottom: 1em; }
+  #articles .row .column {
+    padding-bottom: 50px; }
+    #articles .row .column:first-child {
+      padding-right: 1em; }
+      @media only screen and (max-width: 800px) {
+        #articles .row .column:first-child {
+          padding-right: 0; } }
+    #articles .row .column:last-child {
+      padding-left: 1em; }
+      @media only screen and (max-width: 800px) {
+        #articles .row .column:last-child {
+          padding-left: 0; } }
+
+/* Shop
+        ========================================================================== */
