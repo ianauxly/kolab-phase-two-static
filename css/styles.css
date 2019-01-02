@@ -627,6 +627,9 @@ svg.arrow.right {
   transform: rotate(270deg);
   width: 20px; }
 
+.hidden {
+  display: none; }
+
 /* Navigation
    ========================================================================== */
 header {
@@ -641,21 +644,46 @@ header {
   align-items: center;
   letter-spacing: 0.6px;
   max-width: 100%; }
-  header ul {
+  header #primary-nav ul {
     display: flex; }
-    header ul li:first-child {
+    header #primary-nav ul li:first-child {
       margin-left: 0; }
-    header ul li:nth-child(n+2) {
+    header #primary-nav ul li:nth-child(n+2) {
       margin-right: 0;
       margin-left: 8px; }
-    header ul li:last-child {
+    header #primary-nav ul li:last-child {
       margin-right: 0;
       margin-left: 18px;
       margin-top: 1px; }
-      header ul li:last-child span:first-child {
-        display: none; }
-    header ul a:hover {
+    header #primary-nav ul a:hover {
       box-shadow: 0px 1px 0px 0px #ffffff; }
+  header #menu-overlay {
+    background: #eee;
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    color: #000000;
+    text-transform: initial; }
+    header #menu-overlay #hamburger-nav, header #menu-overlay #search {
+      padding: 22px 0; }
+    header #menu-overlay a:hover {
+      box-shadow: 0px 1px 0px 0px #000000; }
+    header #menu-overlay .internal-links {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 60px; }
+    header #menu-overlay #search #search-input {
+      margin: 0;
+      width: 100%; }
+      @media only screen and (min-width: 800px) {
+        header #menu-overlay #search #search-input {
+          width: 50%; } }
+
+form.search {
+  display: flex;
+  position: relative; }
+  form.search .FooterNewsletter-submitBtn {
+    top: -3px; }
 
 #hamburger span {
   margin: 0;
@@ -669,6 +697,8 @@ header {
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg); }
+  #hamburger span:nth-child(1) {
+    margin-top: 1px; }
   #hamburger span:nth-child(2) {
     margin-top: 3px; }
   #hamburger span:nth-child(3) {
@@ -691,10 +721,11 @@ footer {
   min-height: 266px; }
   footer .inner-width {
     padding-top: 50px; }
-  footer form {
-    padding-top: 4em;
-    display: flex;
-    position: relative; }
+
+form.newsletter-signup {
+  padding-top: 4em;
+  display: flex;
+  position: relative; }
 
 .FooterNewsletter-submitBtn {
   cursor: pointer;
@@ -759,12 +790,10 @@ footer {
     width: calc(100% - 48vw); }
     #product-carousel .slick-carousel .slick-next {
       right: -21vw;
-      background: url("..../phase_two/images/arrow-right.png");
       border: none; }
     #product-carousel .slick-carousel .slick-prev {
       left: -21vw;
-      border: none;
-      background: url("..../phase_two/images/arrow-left.png"); }
+      border: none; }
     #product-carousel .slick-carousel .slick-next,
     #product-carousel .slick-carousel .slick-prev {
       width: 28px;
@@ -918,3 +947,22 @@ section.border-top {
 
 /* Shop
         ========================================================================== */
+#newArrival h2 {
+  padding-bottom: 1em; }
+
+#newArrival .column div {
+  padding-right: 30px; }
+
+.product-grid .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr)); }
+  @media only screen and (max-width: 800px) {
+    .product-grid .row {
+      grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); } }
+
+.product-grid .column {
+  padding: 0.25em;
+  padding-top: 50px; }
+  .product-grid .column h4 {
+    padding-top: 1em;
+    padding-bottom: 0; }
