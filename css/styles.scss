@@ -18,6 +18,8 @@
   }
   *, *::before, *::after {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   /* Sections
@@ -603,8 +605,17 @@ li, ol, p {
 li, ul, ol {
   line-height: 1.3em;
 }
-small, select {
+small, select, label {
   font-size: 12px;
+}
+label {
+  position: relative;
+  svg {
+    width: 20px;
+    position: absolute;
+    top: -35%;
+    right: 1em;
+  }
 }
 .row {
   display: flex;
@@ -699,6 +710,13 @@ section {
   position: relative;
   &:hover {
     box-shadow: none;
+    &.yellow {
+      color: #FFFF00;
+      background: #000000;
+      svg .cls-3 {
+        stroke: #FFFF00;
+      }
+    }
   }
   svg {
     position: absolute;
@@ -721,6 +739,15 @@ svg.arrow.right {
 
 .hidden {
   display: none;
+}
+
+select {
+  border: 1px solid #000000;
+  border-radius: 0;
+  padding: 1.2em;
+  text-transform: uppercase;
+  font-family: 'Neue Haas Grotesk 75';
+  cursor: pointer;
 }
 /* Navigation
    ========================================================================== */
@@ -824,12 +851,24 @@ svg.arrow.right {
        &:nth-child(1) {
           margin-top: 1px;
        }
-
        &:nth-child(2) {
           margin-top: 3px;
        }
        &:nth-child(3) {
           margin-top: 3px;
+       }
+     }
+
+     &.opened {
+       span::before {
+               transform: rotate(45deg);
+            }
+        span::after {
+                transform: rotate(-45deg);
+            }
+       span:nth-child(2),
+       span:nth-child(3) {
+          display: none;
        }
      }
    }
@@ -1185,3 +1224,68 @@ svg.arrow.right {
         }
 
       }
+
+      /* Age Gate
+        ========================================================================== */
+
+        #age-gate {
+          background: #FFFF00;
+          width: calc(100vw - 30px);
+          max-width: 435px;
+          height: 100vh;
+          margin: 0 auto;
+          position: relative;
+          z-index: 1000000;
+          padding-top: 5.6vh;
+
+          form {
+            margin-top: 5.6vh;
+          }
+          label {
+            &:hover {
+              box-shadow: none;
+              color: #FFFF00;
+              background: #000000;
+              svg .cls-1 {
+                stroke: #FFFF00;
+                fill: #000000;
+              }
+            }
+          }
+          select {
+            margin-bottom: 1em;
+            &:hover {
+              box-shadow: none;
+              color: #FFFF00;
+              background: #000000;
+              svg .cls-1 {
+                stroke: #FFFF00;
+                fill: #000000;
+              }
+          }
+          }
+          p {
+            padding-bottom: 1em;
+            font-size: 12px;
+          }
+          .disclaimer {
+            position: absolute;
+            bottom: 5.6vh;
+            max-width: 400px;
+          }
+
+          button {
+            font-family: 'Neue Haas Grotesk 75';
+            cursor: pointer;
+            width: 100%;
+            padding: 1.2em;
+            margin-top: 1em;
+            text-transform: uppercase;
+            font-size: 12px;
+            border-width: 1px;
+            &:hover {
+              color: #FFFF00;
+              background: #000000;
+            }
+          }
+        }

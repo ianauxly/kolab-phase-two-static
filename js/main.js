@@ -132,4 +132,20 @@ var   $menuOverlay,
           }
       });
 
+      // $(document).on("click", function(e){
+      //       if(
+      //         $(e.target).closest("#menu-overlay").length == 0 &&
+      //         $("#menu-overlay").hasClass("flex") &&
+      //         $(e.target).closest("#nav-hamburger").length == 0 &&
+      //         $(e.target).closest("#merch-shop").length == 0 &&
+      //         $(e.target).closest("#search-nav").length == 0
+      //       ){
+      //         menuHide();
+      //         removeNavHamClose();
+      //         hamburgerWrapHide();
+      //         shopMenuHide();
+      //         searchMenuHide();
+      //       }
+      // });
+
 });

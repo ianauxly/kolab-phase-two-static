@@ -18,7 +18,9 @@ html {
   font-weight: 100; }
 
 *, *::before, *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 /* Sections
      ========================================================================== */
@@ -531,8 +533,16 @@ li, ol, p {
 li, ul, ol {
   line-height: 1.3em; }
 
-small, select {
+small, select, label {
   font-size: 12px; }
+
+label {
+  position: relative; }
+  label svg {
+    width: 20px;
+    position: absolute;
+    top: -35%;
+    right: 1em; }
 
 .row {
   display: flex;
@@ -611,6 +621,11 @@ section {
   position: relative; }
   .link-btn:hover {
     box-shadow: none; }
+    .link-btn:hover.yellow {
+      color: #FFFF00;
+      background: #000000; }
+      .link-btn:hover.yellow svg .cls-3 {
+        stroke: #FFFF00; }
   .link-btn svg {
     position: absolute;
     right: 1em;
@@ -629,6 +644,14 @@ svg.arrow.right {
 
 .hidden {
   display: none; }
+
+select {
+  border: 1px solid #000000;
+  border-radius: 0;
+  padding: 1.2em;
+  text-transform: uppercase;
+  font-family: 'Neue Haas Grotesk 75';
+  cursor: pointer; }
 
 /* Navigation
    ========================================================================== */
@@ -703,6 +726,16 @@ form.search {
     margin-top: 3px; }
   #hamburger span:nth-child(3) {
     margin-top: 3px; }
+
+#hamburger.opened span::before {
+  transform: rotate(45deg); }
+
+#hamburger.opened span::after {
+  transform: rotate(-45deg); }
+
+#hamburger.opened span:nth-child(2),
+#hamburger.opened span:nth-child(3) {
+  display: none; }
 
 /* Main
       ========================================================================== */
@@ -966,3 +999,52 @@ section.border-top {
   .product-grid .column h4 {
     padding-top: 1em;
     padding-bottom: 0; }
+
+/* Age Gate
+        ========================================================================== */
+#age-gate {
+  background: #FFFF00;
+  width: calc(100vw - 30px);
+  max-width: 435px;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1000000;
+  padding-top: 5.6vh; }
+  #age-gate form {
+    margin-top: 5.6vh; }
+  #age-gate label:hover {
+    box-shadow: none;
+    color: #FFFF00;
+    background: #000000; }
+    #age-gate label:hover svg .cls-1 {
+      stroke: #FFFF00;
+      fill: #000000; }
+  #age-gate select {
+    margin-bottom: 1em; }
+    #age-gate select:hover {
+      box-shadow: none;
+      color: #FFFF00;
+      background: #000000; }
+      #age-gate select:hover svg .cls-1 {
+        stroke: #FFFF00;
+        fill: #000000; }
+  #age-gate p {
+    padding-bottom: 1em;
+    font-size: 12px; }
+  #age-gate .disclaimer {
+    position: absolute;
+    bottom: 5.6vh;
+    max-width: 400px; }
+  #age-gate button {
+    font-family: 'Neue Haas Grotesk 75';
+    cursor: pointer;
+    width: 100%;
+    padding: 1.2em;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-width: 1px; }
+    #age-gate button:hover {
+      color: #FFFF00;
+      background: #000000; }
