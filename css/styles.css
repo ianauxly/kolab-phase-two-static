@@ -653,6 +653,10 @@ select {
   font-family: 'Neue Haas Grotesk 75';
   cursor: pointer; }
 
+@media only screen and (max-width: 800px) {
+  .lock-scroll-mobile {
+    overflow: hidden; } }
+
 /* Navigation
    ========================================================================== */
 header {
@@ -687,6 +691,9 @@ header {
     width: 100vw;
     color: #000000;
     text-transform: initial; }
+    @media only screen and (max-width: 800px) {
+      header #menu-overlay #hamburger-nav {
+        height: calc(100vh - 76px); } }
     header #menu-overlay #hamburger-nav, header #menu-overlay #search {
       padding: 22px 0; }
     header #menu-overlay a:hover {
@@ -712,7 +719,7 @@ form.search {
   margin: 0;
   display: block;
   height: 2px;
-  width: 10px;
+  width: 15px;
   background: #ffffff;
   opacity: 1;
   left: 0;
@@ -727,15 +734,9 @@ form.search {
   #hamburger span:nth-child(3) {
     margin-top: 3px; }
 
-#hamburger.opened span::before {
-  transform: rotate(45deg); }
-
-#hamburger.opened span::after {
-  transform: rotate(-45deg); }
-
-#hamburger.opened span:nth-child(2),
+#hamburger.opened span:nth-child(1),
 #hamburger.opened span:nth-child(3) {
-  display: none; }
+  background: #000000; }
 
 /* Main
       ========================================================================== */

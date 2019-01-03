@@ -1,4 +1,4 @@
-// A $( document ).ready() block.
+  // A $( document ).ready() block.
 "use strict";
 
 $( document ).ready(function() {
@@ -90,22 +90,34 @@ var   $menuOverlay,
         $searchButton.removeClass('opened');
       }
 
+      function bodyLockScroll() {
+        $('body').addClass('lock-scroll-mobile');
+      }
+
+      function bodyUnlockScroll() {
+        $('body').removeClass('lock-scroll-mobile');
+      }
+
+
       $hamburger.click(function() {
           if( $(this).hasClass('closed') ) {
               hamburgerRemoveClosed();
               hamburgerToggleOpened();
               hamburgerNavShow();
               searchHide();
+              bodyLockScroll();
 
               if( $searchButton.hasClass('opened') ) {
                 searchButtonToggleClosed();
                 searchButtonRemoveOpened();
                 searchHide();
+                bodyUnlockScroll();
               }
           } else if ( $(this).hasClass('opened') ){
               hamburgerRemoveOpened();
               hamburgerToggleClosed();
               hamburgerNavHide();
+              bodyUnlockScroll();
           } else {
             false
           }
@@ -117,11 +129,13 @@ var   $menuOverlay,
               searchButtonToggleOpened();
               hamburgerNavHide();
               searchShow();
+              bodyLockScroll();
 
               if( $hamburger.hasClass('opened') ) {
                 hamburgerRemoveOpened();
                 hamburgerToggleClosed();
                 hamburgerNavHide();
+                bodyLockScroll();
               }
           } else if ( $(this).hasClass('opened') ){
               searchButtonToggleClosed();

@@ -749,6 +749,12 @@ select {
   font-family: 'Neue Haas Grotesk 75';
   cursor: pointer;
 }
+
+@media only screen and (max-width: 800px) {
+  .lock-scroll-mobile {
+      overflow: hidden;
+  }
+}
 /* Navigation
    ========================================================================== */
    header {
@@ -799,6 +805,12 @@ select {
        color: #000000;
        text-transform: initial;
 
+      #hamburger-nav {
+        @media only screen and (max-width: 800px) {
+          height: calc(100vh - 76px);
+        }
+      }
+
        #hamburger-nav, #search {
            padding: 22px 0;
        }
@@ -836,17 +848,17 @@ select {
 
    #hamburger {
        span {
-       margin: 0;
-       display: block;
-       height: 2px;
-       width: 10px;
-       background: #ffffff;
-       opacity: 1;
-       left: 0;
-       -webkit-transform: rotate(0deg);
-       -moz-transform: rotate(0deg);
-       -o-transform: rotate(0deg);
-       transform: rotate(0deg);
+         margin: 0;
+         display: block;
+         height: 2px;
+         width: 15px;
+         background: #ffffff;
+         opacity: 1;
+         left: 0;
+         -webkit-transform: rotate(0deg);
+         -moz-transform: rotate(0deg);
+         -o-transform: rotate(0deg);
+         transform: rotate(0deg);
 
        &:nth-child(1) {
           margin-top: 1px;
@@ -860,15 +872,15 @@ select {
      }
 
      &.opened {
-       span::before {
-               transform: rotate(45deg);
-            }
-        span::after {
-                transform: rotate(-45deg);
-            }
-       span:nth-child(2),
+       // span::before {
+       //         transform: rotate(45deg);
+       //      }
+       //  span::after {
+       //          transform: rotate(-45deg);
+       //      }
+       span:nth-child(1),
        span:nth-child(3) {
-          display: none;
+          background: #000000;
        }
      }
    }
