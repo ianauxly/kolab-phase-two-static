@@ -4,8 +4,8 @@
 $( document ).ready(function() {
 
   $('.slick-carousel').slick({
-    prevArrow:"<img class='a-left control-c prev slick-prev' src='../phase_two/images/arrow-left-transparent.png'>",
-    nextArrow:"<img class='a-right control-c next slick-next' src='../phase_two/images/arrow-right-transparent.png'>"
+    prevArrow:"<img class='a-left control-c prev slick-prev' src='https://raw.githubusercontent.com/ianauxly/klpassets/master/arrow-left-transparent.png'>",
+    nextArrow:"<img class='a-right control-c next slick-next' src='https://raw.githubusercontent.com/ianauxly/klpassets/master/arrow-right-transparent.png'>"
   });
 
   // $.ajax({
