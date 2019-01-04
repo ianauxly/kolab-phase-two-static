@@ -872,12 +872,6 @@ select {
      }
 
      &.opened {
-       // span::before {
-       //         transform: rotate(45deg);
-       //      }
-       //  span::after {
-       //          transform: rotate(-45deg);
-       //      }
        span:nth-child(1),
        span:nth-child(3) {
           background: #000000;
