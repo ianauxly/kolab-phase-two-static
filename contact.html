@@ -10,32 +10,111 @@
 </head>
 <body>
 
-    <header>
-      <nav id="primary-nav" class="inner-width" role="navigation" aria-labelledby="main-navigation">
-        <ul>
-          <li>
-            <a href="index.html">Kolab Project</a>
-          </li>
-          <li class="xs-display-none">
-            <a href="shop.html">Shop</a>
-          </li>
-          <li class="">
-            <a href="">Search</a>
-          </li>
-          <li class="xs-display-none">
-            <a href="">Login</a>
-          </li>
-          <li id="hamburger" class="closed">
-            <!-- <span>Hamburger Nav</span> -->
-            <a href="#navigation" class="menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <nav id="primary-nav" class="inner-width" role="navigation" aria-labelledby="main-navigation">
+      <ul>
+        <li>
+          <a href="index.html">Kolab Project</a>
+        </li>
+        <li class="xs-display-none">
+          <a href="shop.html">Shop</a>
+        </li>
+        <li id="search-button" class="closed">
+          <a href="#">Search</a>
+        </li>
+        <li class="xs-display-none">
+          <a href="">Login</a>
+        </li>
+        <li id="hamburger" class="closed">
+          <!-- <span>Hamburger Nav</span> -->
+          <a href="#navigation" class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="menu-overlay" class="">
+
+      <div id="hamburger-nav" class="hidden">
+        <div class="row inner-width">
+              <div class="internal-links">
+                <ul>
+                  <li>
+                    <a href="contact.html">Contact</a>
+                  </li>
+                  <li>
+                    <a href="">Privacy Policy</a>
+                  </li>
+                  <li>
+                    <a href="">Terms and Conditions</a>
+                  </li>
+                  <li>
+                    <a href="resources.html">Resources</a>
+                  </li>
+                  <li>
+                    <a href="">FAQs</a>
+                  </li>
+                  <li>
+                    <a href="blog.html">Content</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="internal-links">
+                <ul>
+                  <li>
+                    <a href="shop.html">Shop</a>
+                  </li>
+                  <li>
+                    <a href="">Register</a>
+                  </li>
+                  <li>
+                    <a href="">Login</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="internal-links">
+                <ul>
+                  <li>
+                    <a href="">Instagram</a>
+                  </li>
+                  <li>
+                    <a href="">Twitter</a>
+                  </li>
+                  <li>
+                    <a href="">Facebook</a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </div>
+
+      <div id="search" class="hidden">
+          <div class="row inner-width">
+            <div id="search-input">
+              <form class="search" action="">
+                <input class="lg-font" type="text" placeholder="Search" id="email" name="email">
+                <button class="FooterNewsletter-submitBtn" data-ref="submit"
+                type="submit">
+                <svg class="arrow right" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15.77 20.59">
+                  <defs>
+                    <style>.cls-1,.cls-3{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{stroke:#231f20;stroke-miterlimit:10;}</style>
+                    <clipPath id="clip-path" transform="translate(-273 -355.41)"><rect class="cls-1" x="273" y="355.41" width="15.77" height="20.59"/></clipPath></defs><title>Submit</title><g class="cls-2"><line class="cls-3" x1="7.6" x2="7.6" y2="19.76"/>
+                      <polyline class="cls-3" points="0.36 12.36 7.61 19.87 15.41 11.78"/></g>
+                    </svg>
+                  </button>
+                </form>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </header>
+
 
 
     <main>
